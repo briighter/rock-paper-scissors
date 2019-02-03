@@ -18,29 +18,30 @@
             while (playerOneChoice != "exit") { // Unitl the player enters "exit"
             //Get a random selection from the computers choices and display computers choice
                 let computerChoice = computerOptions[Math.floor(Math.random()*computerOptions.length)];
-                alert("Computer picks " + computerChoice);
+                // Set computer pick to variable for reuse
+                computerPick = "Computer picks " + computerChoice;
             
             // TODO: Change to be SWITCH CASE algorithm
                 if (playerOneChoice == "rock" && computerChoice == "Paper") {
-                    alert("Computer Wins!");
+                    alert(computerPick + "\nComputer Wins!");
                     computerWins += 1; // Increment computer win
                 } else if (playerOneChoice == "rock" && computerChoice == "Scissors") {
-                    alert("Player Wins!");
+                    alert(computerPick + "\nPlayer Wins!");
                     playerWins += 1; // Increment player win
                 } else if (playerOneChoice == "paper" && computerChoice == "Scissors") {
                     computerWins += 1;
-                    alert("Computer Wins!");
+                    alert(computerPick + "\nComputer Wins!");
                 } else if (playerOneChoice == "paper" && computerChoice == "Rock") {
                     playerWins += 1;
-                    alert("Player Wins!");
+                    alert(computerPick + "\nPlayer Wins!");
                 } else if (playerOneChoice == "scissors" && computerChoice == "Rock") {
                     computerWins += 1;
-                    alert("Computer Wins!");
+                    alert(computerPick + "\nComputer Wins!");
                 } else if (playerOneChoice == "scissors" && computerChoice == "Paper") {
                     playerWins += 1;
-                    alert("Player Wins!");
+                    alert(computerPick + "\nPlayer Wins!");
                 } else if (playerOneChoice == computerChoice.toLowerCase()) {
-                    alert("Draw!");
+                    alert(computerPick + "\nDraw!");
                 }
                 playerOneChoice = prompt("Select: Rock, Paper, or Scissors\
                                         \nPlayer score: " + playerWins +"\
