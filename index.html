@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors Game</title>
+</head>    
+<body>
+    <script>
+        function startGame() {
+            // Create Computers selection options
+            let computerOptions = ["Rock", "Paper", "Scissors"];
+
+            // Track player and computer wins
+            let playerWins = 0;
+            let computerWins = 0;
+
+            playerOneChoice = prompt("Select: Rock, Paper, or Scissors\n'Exit' to leave");
+            playerOneChoice = playerOneChoice.toLowerCase(); // Transform player entry to fit system
+            while (playerOneChoice != "exit") { // Unitl the player enters "exit"
+            //Get a random selection from the computers choices and display computers choice
+                let computerChoice = computerOptions[Math.floor(Math.random()*computerOptions.length)];
+                alert("Computer picks " + computerChoice);
+            
+            // TODO: Change to be SWITCH CASE
+                if (playerOneChoice == "rock" && computerChoice == "Paper") {
+                    alert("Computer Wins!");
+                    computerWins += 1; // Increment computer win
+                } else if (playerOneChoice == "rock" && computerChoice == "Scissors") {
+                    alert("Player Wins!");
+                    playerWins += 1; // Increment player win
+                } else if (playerOneChoice == "paper" && computerChoice == "Scissors") {
+                    computerWins += 1;
+                    alert("Computer Wins!");
+                } else if (playerOneChoice == "paper" && computerChoice == "Rock") {
+                    playerWins += 1;
+                    alert("Player Wins!");
+                } else if (playerOneChoice == "scissors" && computerChoice == "Rock") {
+                    computerWins += 1;
+                    alert("Computer Wins!");
+                } else if (playerOneChoice == "scissors" && computerChoice == "Paper") {
+                    playerWins += 1;
+                    alert("Player Wins!");
+                } else if (playerOneChoice == computerChoice.toLowerCase()) {
+                    alert("Draw!");
+                }
+                playerOneChoice = prompt("Select: Rock, Paper, or Scissors\
+                                        \nPlayer score: " + playerWins +"\
+                                        \nComputer score: " + computerWins);
+                playerOneChoice = playerOneChoice.toLowerCase(); // Transform player entry to fit system
+            }
+        }
+        /*Start the game*/
+        startGame();
+    </script>
+</body>
+</html>
