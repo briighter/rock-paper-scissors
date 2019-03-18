@@ -3,61 +3,17 @@
 <head>
     <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-</head>    
+</head>
 <body>
-    <script>
-        function startGame() {
-            // Create Computers selection options
-            let computerOptions = ["Rock", "Paper", "Scissors"];
-
-            // Track player and computer wins
-            let playerWins = 0;
-            let computerWins = 0;
-
-            playerOneChoice = prompt("Select: Rock, Paper, or Scissors\n'Exit' to leave");
-            playerOneChoice = playerOneChoice.toLowerCase(); // Transform player entry to fit system
-            while (playerOneChoice != "exit") { // Unitl the player enters "exit"
-            //Get a random selection from the computers choices and display computers choice
-                let computerChoice = computerOptions[Math.floor(Math.random()*computerOptions.length)];
-                // Set computer pick to variable for reuse
-                computerPick = "Computer picks " + computerChoice;
-            
-            // TODO: Change to be SWITCH CASE algorithm
-                if (playerOneChoice == "rock" && computerChoice == "Paper") {
-                    alert(computerPick + "\nComputer Wins!");
-                    computerWins += 1; // Increment computer win
-                } else if (playerOneChoice == "rock" && computerChoice == "Scissors") {
-                    alert(computerPick + "\nPlayer Wins!");
-                    playerWins += 1; // Increment player win
-                } else if (playerOneChoice == "paper" && computerChoice == "Scissors") {
-                    computerWins += 1;
-                    alert(computerPick + "\nComputer Wins!");
-                } else if (playerOneChoice == "paper" && computerChoice == "Rock") {
-                    playerWins += 1;
-                    alert(computerPick + "\nPlayer Wins!");
-                } else if (playerOneChoice == "scissors" && computerChoice == "Rock") {
-                    computerWins += 1;
-                    alert(computerPick + "\nComputer Wins!");
-                } else if (playerOneChoice == "scissors" && computerChoice == "Paper") {
-                    playerWins += 1;
-                    alert(computerPick + "\nPlayer Wins!");
-                } else if (playerOneChoice == computerChoice.toLowerCase()) {
-                    alert(computerPick + "\nDraw!");
-                }
-                playerOneChoice = prompt("Select: Rock, Paper, or Scissors\
-                                        \nPlayer score: " + playerWins +"\
-                                        \nComputer score: " + computerWins);
-                playerOneChoice = playerOneChoice.toLowerCase(); // Transform player entry to fit system
-            }
-        }
-        /*Start the game*/
-        // startGame();
-    </script>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-    <div>
+    <div id="header-container"></div>
+    <div id="selection-container">
+        <button class="option"><img src="images/rock_emoji.png" /></button>
+        <button class="option"><img src="images/paper_emoji.png" /></button>
+        <button class="option"><img src="images/scissors_emoji.png" /></button>
+    </div>
+    <div id="start-container">
         <button id="start-button" onclick="startGame()">Tap Here to Play</button>
     </div>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
