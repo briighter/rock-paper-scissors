@@ -129,6 +129,7 @@ $color5: rgba(242, 226, 186, 1);
     background: transparent;
     border: 3px solid #baf2bb;
     border-radius: 50%;
+    box-shadow: 4px 4px 16px 0 #baf2bb;
     padding: 20px;
     margin: 0 20px;
 }
