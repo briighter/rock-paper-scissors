@@ -127,6 +127,8 @@ $color5: rgba(242, 226, 186, 1);
 
 .choice {
     background: transparent;
-    border: none;
+    border: 3px solid #baf2bb;
+    border-radius: 50%;
     padding: 20px;
+    margin: 0 20px;
 }
