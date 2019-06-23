@@ -46,3 +46,30 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* END CSS RESET */
+
+.game-title {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.game-title h1 {
+    font-size: 2em;
+}
+
+.scoreboard {
+    text-align: center;
+    height: 100px;
+}
+
+.title {
+    display: inline-block;
+}
+
+.score {
+    display: inline-block;
+}
+
+.choices {
+    text-align: center;
+}
