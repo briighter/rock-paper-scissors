@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Playfair+Display&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -48,6 +50,25 @@ table {
 }
 /* END CSS RESET */
 
+/* Coolors Exported Palette - coolors.co/baf2bb-baf2d8-bad7f2-f2bac9-f2e2ba */
+
+/* HSL */
+/*
+$color1: hsla(121%, 68%, 84%, 1);
+$color2: hsla(152%, 68%, 84%, 1);
+$color3: hsla(209%, 68%, 84%, 1);
+$color4: hsla(344%, 68%, 84%, 1);
+$color5: hsla(43%, 68%, 84%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(186, 242, 187, 1);
+$color2: rgba(186, 242, 216, 1);
+$color3: rgba(186, 215, 242, 1);
+$color4: rgba(242, 186, 201, 1);
+$color5: rgba(242, 226, 186, 1);
+*/
+
 .game-title {
     text-align: center;
     margin-top: 1.5rem;
@@ -55,16 +76,20 @@ table {
 
 .game-title h1 {
     font-size: 2em;
+    color: #f2bac9;
+    font-family: 'Comfortaa';
 }
 
 .announce {
     text-align: center;
     margin: 1.5rem 0;
+    font-family: 'Playfair Display';
+    letter-spacing: .4em;
 }
 
 .scoreboard {
     text-align: center;
-    margin:  10px auto;
+    margin: auto;
     width: 100%;
     height: 6em;
 }
@@ -72,11 +97,28 @@ table {
 .title {
     display: inline-block;
     padding: 10px 10px;
+    font-family: 'Comfortaa';
+    font-size: 2em;
 }
 
+#player-title {
+    color: #baf2d8;
+}
+
+#computer-title {
+    color: #f2e2ba;
+    position: relative;
+    left: 20px;
+}
+
+.scoreboard {
+    padding-bottom: 50px;
+}
 .score {
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
+    font-family: 'Comfortaa';
+    font-size: 2em;
 }
 
 .choices {
