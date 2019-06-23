@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Rock Paper Scissors Game</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-    <div id="header-container"></div>
-    <div id="selection-container">
-        <button class="option"><img src="images/rock_emoji.png" /></button>
-        <button class="option"><img src="images/paper_emoji.png" /></button>
-        <button class="option"><img src="images/scissors_emoji.png" /></button>
-    </div>
-    <div id="start-container">
-        <button id="start-button" onclick="startGame()">Tap Here to Play</button>
-    </div>
-    <script src="scripts/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <script src="scripts/script.js"></script>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <div class="game-title">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="announce">
+            <p id="announce-text"></p>
+        </div>
+        <div class="scores">
+            <div class="score-titles">
+                <div>
+                    <p>Player</p>
+                </div>
+                <div>
+                    <p>Computer</p>
+                </div>
+            </div>
+            <div class="score-scores">
+                <p id="player-score">0</p>
+                <p>:</p>
+                <p id="computer-score">0</p>
+            </div>
+            <div class="choices">
+                <button><img id="rock" src="assets/moai.png"></button>
+                <button><img id="paper" src="assets/toiletpaper.png"></button>
+                <button><img id="scissors" src="assets/scissors.png"></button>
+            </div>
+        </div>
+    </body>
 </html>
