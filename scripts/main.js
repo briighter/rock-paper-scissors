@@ -1,3 +1,6 @@
+// Get computer callout
+let compCallOut = document.querySelector("#computerchoicecallout");
+
 // get button objects from DOM
 let rock_btn = document.getElementById('rock');
 let paper_btn = document.getElementById('paper');
@@ -27,10 +30,14 @@ function playGame() {
                 //computer wins
                 cpuScore++;
                 computerScore.innerHTML = cpuScore;
+                compCallOut.innerHTML = "I selected Paper :P";
             } else if (Number(compChoice) == 2) {
                 // player wins
                 playScore++;
                 playerScore.innerHTML = playScore;
+                compCallOut.innerHTML = "I selected Scissors >:(";
+            } else {
+                compCallOut.innerHTML = "I selected Rock. DRAW!";
             }
             break;
         case 1:
@@ -38,10 +45,14 @@ function playGame() {
                 //computer wins
                 cpuScore++;
                 computerScore.innerHTML = cpuScore;
+                compCallOut.innerHTML = "I selected Scissors :P";
             } else if (Number(compChoice) == 0) {
                 // player wins
                 playScore++;
                 playerScore.innerHTML = playScore;
+                compCallOut.innerHTML = "I selected Rock >:(";
+            } else {
+                compCallOut.innerHTML = "I selected Paper DRAW!";
             }
             break;
         case 2:
@@ -49,10 +60,14 @@ function playGame() {
                 //computer wins
                 cpuScore++;
                 computerScore.innerHTML = cpuScore;
+                compCallOut.innerHTML = "I selected Rock :P";
             } else if (Number(compChoice) == 1) {
                 // player wins
                 playScore++;
                 playerScore.innerHTML = playScore;
+                compCallOut.innerHTML = "I selected Paper >:(";
+            } else {
+                compCallOut.innerHTML = "I selected Scissors DRAW!";
             }
             break;
         default:
