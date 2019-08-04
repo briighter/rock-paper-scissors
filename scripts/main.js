@@ -18,7 +18,8 @@ scissors_btn.addEventListener("click", playGame);
 
 function playGame() {
     //let playerChoice = document.getElementById(e.id).value;
-    let compRoll = Math.random();
-    
+    let compRoll = Math.random() * 3;
+    let compChoice = compRoll.toString().substr(0,1);
     alert(this.value);
+    alert(compChoice);
 }
